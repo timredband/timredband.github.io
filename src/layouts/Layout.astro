@@ -1,4 +1,6 @@
 ---
+import '@fontsource-variable/inter';
+
 interface Props {
     title: string;
 }
@@ -21,26 +23,22 @@ const { title } = Astro.props;
     </body>
 </html>
 <style is:global>
-    :root {
-        --accent: 136, 58, 234;
-        --accent-light: 224, 204, 250;
-        --accent-dark: 49, 10, 101;
-        --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
-    }
     html {
-        font-family: system-ui, sans-serif;
-        background: #13151a;
-        background-size: 224px;
+        font-family: 'Inter Variable', sans-serif;
     }
-    code {
-        font-family:
-            Menlo,
-            Monaco,
-            Lucida Console,
-            Liberation Mono,
-            DejaVu Sans Mono,
-            Bitstream Vera Sans Mono,
-            Courier New,
-            monospace;
+
+    body {
+        margin: 40px auto;
+        max-width: 650px;
+        line-height: 1.75;
+        font-size: 16px;
+        color: #404040;
+        padding: 0 10px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        line-height: 1.2;
     }
 </style>
