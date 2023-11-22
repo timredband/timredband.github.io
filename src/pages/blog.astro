@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+
+import Layout from '../layouts/Layout.astro';
+
+const blogs = await getCollection('blog');
+blogs.sort((a, b) => (a.data.date < b.data.date ? 1 : -1));
+---
+
+<Layout title='Blog'>
+    <h1 class='mb-8 text-2xl font-medium tracking-tighter'>Read my blog</h1>
+    <div class='mb-4 flex flex-col space-y-4'>
+        {
+            blogs.map((blog) => {
+                return (
+                    <div class='flex flex-col '>
+                        <a href={blog.slug}>
+                            <p class='text-lg'>{blog.data.title}</p>
+                        </a>
+                        <p class='text-sm text-neutral-600'>{blog.data.date.toISOString().slice(0, 10)}</p>
+                    </div>
+                );
+            })
+        }
+    </div>
+</Layout>
