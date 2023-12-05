@@ -6,4 +6,11 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
     site: 'https://timredband.github.io',
     integrations: [tailwind(), mdx()],
+    markdown: {
+        shikiConfig: {
+            theme: 'github-light',
+            // Alternatively, provide multiple themes
+            // https://github.com/antfu/shikiji#lightdark-dual-themes
+        },
+    },
 });
