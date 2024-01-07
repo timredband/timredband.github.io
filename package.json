@@ -16,6 +16,7 @@
     "@astrojs/tailwind": "5.0.2",
     "@fontsource-variable/inter": "5.0.15",
     "@tailwindcss/typography": "0.5.10",
+    "@types/google.visualization": "0.0.73",
     "@typescript-eslint/eslint-plugin": "6.13.1",
     "@typescript-eslint/parser": "6.13.1",
     "astro": "3.6.3",
